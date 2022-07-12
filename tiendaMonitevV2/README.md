@@ -1,4 +1,4 @@
-# [Monitev(https://monitev.com) [![version][version-badge]][CHANGELOG]
+# [Monitev(https://monitev.com) [V1.1]]
 
 ![alt text](https://i.postimg.cc/T34qwFLS/monitev.png? "Monitev")
 
