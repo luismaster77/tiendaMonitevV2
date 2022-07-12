@@ -1,0 +1,179 @@
+<div class="section section-pagination mt-4">
+    <div class="row justify-content-md-center text-center">
+        <div class="col-md-12 col-lg-8">
+            <h2 class="title">NUESTROS PLANES</h2>
+        </div>
+    </div>
+  <div class="container">
+      <div class="col-md-12">
+      <table class="card-pricing dark" id="pricing">
+          <thead>
+              <tr>
+                  <th> </th>
+                  <th [ngClass]="{'column-black active': plan.nombre === 'AVANZADO'}" *ngFor="let plan of planesList">
+                      <div class="pricing-title">
+                          <h3 [ngClass]="plan.nombre === 'AVANZADO' ? 'pricing-subtitle text-white':''">{{plan.nombre}}</h3>
+                          <div class="pricing-description"></div>
+                          <h2 [ngClass]="plan.nombre === 'AVANZADO' ? 'pricing-subtitle text-white':'pricing-subtitle'"> {{plan.precio | currency: 'USD'}} </h2>
+                          <form id="FREELANCER" action="/send-product-to-avangate/now-ui-kit-pro-angular"
+                              accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓"> <button
+                              type="button" (click)="open(plan)"
+                              [ngClass]="plan.nombre === 'AVANZADO' ? 'btn-pricing-active btn-round btn-add-cart btn-block':'btn btn-pricing btn-round btn-add-cart btn-block'" class="">Comprar</button> </form>
+                      </div>
+                  </th>               
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td style="width:40%"> <span class="bf-image-category " rel="tooltip" title="Dispositivos conectados o activos del cliente  en la plataforma de Monitev"
+                          data-original-title="">Dispositivos conectados
+                          &nbsp;&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></span> </td>
+                  <ng-container *ngFor="let plan of planesList">
+                  <td [ngClass]="{'column-black text-white': plan.nombre === 'AVANZADO'}">{{plan.num_dispositivos_conectados}}</td>                     
+                  </ng-container>
+              </tr>                  
+              <tr>
+                  <td> <span class="bf-image-category " rel="tooltip" title="Número de usuarios activos en la cuenta del inquilino"
+                          data-original-title="">Usuarios
+                          &nbsp;&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></span> </td>
+                  <ng-container *ngFor="let plan of planesList">
+                      <td [ngClass]="{'column-black text-white': plan.nombre === 'AVANZADO'}">{{plan.num_usuarios}}</td>                     
+                  </ng-container>
+              </tr>
+              <tr>
+                  <td> <span class="bf-image-category " rel="tooltip" title="Número de paquetes enviados por transacción"
+                          data-original-title="">Puntos por mes
+                          &nbsp;&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></span> </td>
+                  <ng-container *ngFor="let plan of planesList">
+                      <td [ngClass]="{'column-black text-white': plan.nombre === 'AVANZADO'}">{{plan.num_puntos_mes}}</td>                     
+                  </ng-container>
+              </tr>
+              
+              <tr>
+                  <td> <span class="bf-image-category " rel="tooltip" title="Monitev proporciona soporte via email con respecto a la configuración de la cuenta que tenga el cliente"
+                          data-original-title="">Soporte vía email
+                          &nbsp;&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></span> </td>
+                  <ng-container *ngFor="let plan of planesList">
+                      <td [ngClass]="{'column-black text-white': plan.nombre === 'AVANZADO'}">
+                          <i class="fa fa-check m-0"></i>
+                      </td>                     
+                  </ng-container>
+              </tr>
+              <tr>
+                  <td> <span class="bf-image-category " rel="tooltip" title="El cliente puede configurar el logo de su cuenta principal"
+                          data-original-title="">Configura tu logo
+                          &nbsp;&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></span> </td>
+                  <ng-container *ngFor="let plan of planesList">
+                      <td [ngClass]="{'column-black text-white': plan.nombre === 'AVANZADO'}">
+                          <span *ngIf="plan.nombre === 'BÁSICO'; else blockI" class="unchecked">X</span>
+                          <ng-template #blockI><i class="fa fa-check m-0"></i></ng-template>
+                      </td>                     
+                  </ng-container>
+              </tr>
+              <tr>
+                  <td> <span class="bf-image-category " rel="tooltip" title="El cliente puede personalizar su panel de control para ofrecer a sus inquilinos una experiencia única"
+                          data-original-title="How many people can work and have access to the source code of our items. You have an “Invite Team” option in your Downloads dashboard to invite your team members.">Personalizar colores
+                          &nbsp;&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></span> </td>
+                  <ng-container *ngFor="let plan of planesList">
+                      <td [ngClass]="{'column-black text-white': plan.nombre === 'AVANZADO'}">
+                          <span *ngIf="plan.nombre === 'BÁSICO'; else blockI" class="unchecked">X</span>
+                          <ng-template #blockI><i class="fa fa-check m-0"></i></ng-template>
+                      </td>                     
+                  </ng-container>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  </div>
+</div>
+<div class="section">
+    <div class="container text-center">
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 col-lg-8">
+                  <h2 class="title">Necesitas un plan personalizado para tu empresa?</h2>
+                  <h5 class="">No te preocupes, nosotros te podemos ayudar. Contáctanos vía email para tener el gusto de atenderte y resolver tus dudas</h5>
+                  <div class="footer text-center">
+                  <a href="#pablo" class="btn btn-primary btn-round">Contactar con Monitev</a>
+                  </div>
+              </div>
+        </div>
+    </div>
+</div>
+<div class="section">
+  <div class="container text-center">
+      <div class="row justify-content-md-center">
+          <div class="col-md-12 col-lg-8">
+                <h2 class="title">Preguntas frecuentes</h2>
+              <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="nav-link" >
+              <ngb-panel title="¿Qué es un punto de datos?" style="color: white !important;">
+                  <ng-template ngbPanelContent>
+                      <span>
+                          Un punto de datos es un par clave-valor que contiene los mensajes de telemetría de su dispositivo. Ejemplo, el mensaje  contiene dos puntos de datos.
+                      </span>
+                  </ng-template>
+              </ngb-panel>
+              <ngb-panel title="¿Puedo tener una suscripción de prueba?" class="nav-link">
+                  <ng-template ngbPanelTitle>
+                  <span class="description"> </span>
+                  </ng-template>
+                  <ng-template ngbPanelContent>
+                      Si. Puedes tener una suscripción de prueba comunìcate con Monitev para asignarte un plan de pruebas o también puedes acceder al Live Demo.
+                  </ng-template>
+              </ngb-panel>
+              <ngb-panel title="¿Puedo adicionar mas usuarios a mi plan de suscripción?" class="nav-link">
+                  <ng-template ngbPanelTitle>
+                  <span class="description"> </span>
+                  </ng-template>
+                  <ng-template ngbPanelContent>
+                      Si. Cada plan de suscripción cuenta con un usuario administrador y un número de clientes, el cual se puede expandir adicionando un paquete de usuarios.
+                  </ng-template>
+              </ngb-panel>
+              </ngb-accordion>
+            </div>
+      </div>
+  </div>
+</div>
+<ng-template #content let-modal>
+    <!-- <div class="modal-header">
+        <div class="row">
+            <div class="col-sm-3">
+                <p class="category text-center">MONITEV</p>
+                <img src="assets/img/favicon_monitev.png" class="img-responsive" alt="Rounded Image" class="rounded">
+            </div>
+            <div class="col-md-8 mt-4" style="text-align: center;">
+                <h4 class="modal-title" id="modal-basic-title">Detalle compra</h4>
+            </div>
+        </div>
+      <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+        <i class="now-ui-icons ui-1_simple-remove"></i>
+    </button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-mb-3">
+              <label>Plan: <strong>{{plan.nombre}}</strong></label><br>
+              <label>Precio: <strong>{{plan.precio | currency: 'USD'}}</strong></label><br>
+              <label>Usuarios: <strong>{{plan.num_usuarios}}</strong></label>
+              <label>Dispositivos conectados: <strong>{{plan.num_dispositivos_conectados}}</strong> </label>
+            </div>
+            <div class="col-md-6 col-md-offset-mb-3">
+              <label>Puntos por mes: <strong>{{plan.num_puntos_mes}}</strong></label>
+              <label>Soporte via email: <strong>{{plan.soporte_email ? 'SI':'NO'}}</strong></label>
+              <label>Configura tu logo: <strong>{{plan.configura_logo ? 'SI':'NO'}}</strong></label>
+              <label>Personaliza colores: <strong>{{plan.personaliza_colores ? 'SI':'NO'}}</strong></label>
+            </div>
+            <hr/>
+            <div class="col-md-12 col-md-offset-mb-3">
+                <label>Total compra: <strong> {{plan.precioTotal | currency: 'USD' }}</strong></label>
+            </div>
+            
+            <div class="col-md-12 col-md-offset-mb-3">
+                <p class="text-danger" style="font-size:'smaller'">NOTA: La suscripción se hace automáticamente por un año a partir de la fecha de compra.</p>
+              </div>
+        </div>
+    </div>
+    <div class="modal-footer justify-content-end">
+      <button type="button" class="btn-pricing-active btn-round btn-add-cart btn-block" (click)="modal.close('Save click')">Continuar</button>
+    </div> -->
+  </ng-template>
+<app-footer *ngIf="mostrarFooter"></app-footer>

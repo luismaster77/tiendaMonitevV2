@@ -1,0 +1,26 @@
+.style-input-monitev{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: rgba(0, 0, 0, 0.125) !important;
+    border-radius: 0;
+}
+
+.form-select-monitev{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.size-detail{
+    font-size: 11px;
+}

@@ -1,0 +1,332 @@
+.card{
+    border: 0;
+    border-radius: $border-radius-small;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+
+    .card-body{
+        min-height: 110px;
+    }
+
+    &[data-background-color="orange"]{
+        background-color: $primary-color;
+    }
+
+    &[data-background-color="red"]{
+        background-color: $danger-color;
+    }
+
+    &[data-background-color="yellow"]{
+        background-color: $warning-color;
+    }
+
+    &[data-background-color="blue"]{
+        background-color: $info-color;
+    }
+
+    &[data-background-color="green"]{
+        background-color: $success-color;
+    }
+}
+
+.card-signup{
+    max-width: 350px;
+    margin: 0 auto;
+
+    .header{
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 30px 0;
+    }
+    .text-divider{
+        margin-top: 30px;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+    .card-body{
+        padding-top: 0px;
+        padding-bottom: 0px;
+        min-height: auto;
+    }
+
+    .checkbox{
+        margin-top: 20px;
+
+        label{
+            margin-left: 17px;
+        }
+        .checkbox-material{
+            padding-right: 12px;
+        }
+    }
+
+    .social-line{
+        margin-top: 20px;
+        text-align: center;
+
+        .btn.btn-icon ,
+        .btn.btn-icon .btn-icon -mini{
+            margin-left: 5px;
+            margin-right: 5px;
+            box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .footer{
+        margin-bottom: 10px;
+        margin-top: 24px;
+    }
+}
+
+.card-plain{
+    background: transparent;
+    box-shadow: none;
+
+    .header{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .content{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.card-pricing:not(.subscription-card-pricing), .subscription-card-pricing:not(.subscription-card-pricing) {
+    box-shadow: 0 2px 48px 0 rgb(0 0 0 / 13%);
+}
+.dark {
+    --color: #444;
+}
+.card-pricing, .subscription-card-pricing {
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.dark {
+    --btn-bg: #444;
+    --description-color: #999;
+}
+
+table {
+    background-color: transparent;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.card-pricing thead, .subscription-card-pricing thead {
+    margin-top: 10px;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.dark {
+    --color: #444;
+}
+.dark {
+    --btn-bg: #444;
+    --description-color: #999;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.dark {
+    --color: #444;
+}
+.dark {
+    --btn-bg: #444;
+    --description-color: #999;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.card-pricing thead th:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.card-pricing thead tr th, .subscription-card-pricing thead tr th {
+    padding-top: 10px;
+}
+.card-pricing thead th {
+    background-color: #fff;
+    position: sticky;
+    top: 70px;
+}
+.card-pricing th, .card-pricing td, .subscription-card-pricing th, .subscription-card-pricing td {
+    width: 20%;
+    padding: 0 20px;
+}
+
+th {
+    text-align: left;
+}
+td, th {
+    padding: 0;
+}
+.card-pricing thead th:not(:first-child), .card-pricing tbody td:not(:first-child), .subscription-card-pricing thead th:not(:first-child), .subscription-card-pricing tbody td:not(:first-child) {
+    text-align: center;
+}
+.card-pricing thead tr th, .subscription-card-pricing thead tr th {
+    padding-top: 10px;
+}
+.card-pricing thead th {
+    background-color: #fff;
+    position: sticky;
+    top: 70px;
+}
+.card-pricing th, .card-pricing td, .subscription-card-pricing th, .subscription-card-pricing td {
+    width: 20%;
+    padding: 0 20px;
+}
+th {
+    text-align: left;
+}
+.card-pricing thead th:not(:first-child), .card-pricing tbody td:not(:first-child), .subscription-card-pricing thead th:not(:first-child), .subscription-card-pricing tbody td:not(:first-child) {
+    text-align: center;
+}
+.card-pricing thead tr th, .subscription-card-pricing thead tr th {
+    padding-top: 10px;
+}
+.card-pricing thead th {
+    background-color: #fff;
+    position: sticky;
+    top: 70px;
+}
+.card-pricing th, .card-pricing td, .subscription-card-pricing th, .subscription-card-pricing td {
+    width: 20%;
+    padding: 0 20px;
+}
+.column-black {
+    background-color: var(--btn-bg) !important;
+}
+.btn-pricing-active, .btn-pricing-active:hover, .btn-pricing-active:focus, .btn-pricing-active:active, .btn-pricing-active.active {
+    background-color: #FF281E !important;
+    border-color: #FF281E !important;
+}
+.btn-pricing-active, .btn-pricing-active:hover, .btn-pricing-active:focus, .btn-pricing-active:active, .btn-pricing-active.active, .btn-pricing, .btn-pricing:hover, .btn-pricing:focus, .btn-pricing:active, .btn-pricing.active {
+    font-size: 11px !important;
+    background-color: var(--btn-bg);
+    border-color: var(--btn-bg) !important;
+    padding: 10px 18px;
+    opacity: 1;
+    box-shadow: 0 2px 20px 0 rgb(0 0 0 / 30%);
+    text-transform: uppercase;
+    border-radius: 6px !important;
+    font-weight: 700;
+}
+.btn:hover {
+    background-color: transparent;
+    opacity: 1;
+}
+a, a:hover, a:focus, .btn:focus, .btn:hover, .btn:active, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+    text-decoration: none;
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+}
+.btn:hover, .btn:focus, .btn.focus {
+    color: #333;
+    text-decoration: none;
+}
+.btn-round {
+    border-width: 1px;
+    border-radius: 30px !important;
+    opacity: 0.79;
+    padding: 9px 18px;
+}
+.btn {
+    border-width: 2px;
+    font-weight: 400;
+    opacity: 0.8;
+    padding: 7px 16px;
+}
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button, select {
+    text-transform: none;
+}
+button {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.product table tr td:first-child {
+    width: 7%;
+}
+
+.card-pricing tbody tr td, .subscription-card-pricing tbody tr td {
+    line-height: 2.75;
+    font-size: 12px;
+}
+.card-pricing tbody tr:last-child td, .subscription-card-pricing tbody tr:last-child td {
+    padding-bottom: 30px;
+}
+.card-pricing .pricing-title h3, .subscription-card-pricing .pricing-title h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}

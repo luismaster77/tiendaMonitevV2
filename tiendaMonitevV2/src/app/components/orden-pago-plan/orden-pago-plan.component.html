@@ -1,0 +1,153 @@
+<div class="page-header page-header-small">
+    <div class="page-header-image rellax-header" data-rellax-speed="-8"
+        style="background-image: url('assets/img/fondo-01.jpg');">
+    </div>
+    <div class="container">
+        <div class="content-center">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto text-center">
+                    <h2 class="title">Finalizar compra</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <main>
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="assets/img/favicon_monitev.png" alt="" width="72" height="57">
+        <h2>Finalizar</h2>
+        <p class="lead">Por favor completa tu información, la necesitamos para crear el perfil de usuario</p>
+      </div>
+  
+      <div class="row g-5">
+        <div class="col-md-5 col-lg-4 order-md-last">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-primary">Carrito</span>
+            <span class="badge bg-primary rounded-pill">1</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div class="row">
+                <div class="col-md-12">
+                  <h6 class="my-0">Detalle producto</h6>
+                  <small class="text-muted size-detail"><strong>Nombre plan:</strong></small> <span>{{data.plan.nombre}}</span><br>
+                  <small class="text-muted size-detail"><strong>Precio:</strong> {{data.plan.precio | currency: 'USD'}}</small><br>
+                  <small class="text-muted size-detail"><strong>Dispositivos conectados:</strong> {{data.plan.num_dispositivos_conectados}}</small><br>
+                  <small class="text-muted size-detail"><strong>Usuarios:</strong> {{data.plan.num_usuarios}}</small><br>
+                  <small class="text-muted size-detail"><strong>Puntos por mes:</strong> {{data.plan.num_puntos_mes}}</small><br>
+                  <small class="text-muted size-detail"><strong>Soporte email:</strong> {{data.plan.soporte_email ? 'SI':'NO'}}</small><br>
+                  <small class="text-muted size-detail"><strong>Configuración logo:</strong> {{data.plan.configura_logo ? 'SI':'NO'}}</small><br>
+                  <small class="text-muted size-detail"><strong>Personaliza colores:</strong> {{data.plan.personaliza_colores ? 'SI':'NO'}}</small><br>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div>
+                <h6 class="my-0">Iva</h6>
+                <small class="text-muted"></small>
+              </div>
+              <span class="text-muted">$5</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total (USD)</span>
+              <strong>{{data.plan.precioTotal | currency: 'USD'}}</strong>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-7 col-lg-8">
+          <h4 class="mb-3">Información personal</h4>
+          <form class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">Primer nombre</label>
+                <input type="text" class="form-control style-input-monitev" id="firstName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Segundo nombre<span class="text-muted">(Opcional)</span></label>
+                <input type="text" class="form-control style-input-monitev" id="lastName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+              <div class="col-sm-6 mt-3">
+                <label for="lastName" class="form-label">Primer apellido</label>
+                <input type="text" class="form-control style-input-monitev" id="lastName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6 mt-3">
+                <label for="lastName" class="form-label">Segundo apellido<span class="text-muted">(Opcional)</span></label>
+                <input type="text" class="form-control style-input-monitev" id="lastName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+  
+              <div class="col-12 mt-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control style-input-monitev" id="email" placeholder="you@example.com">
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+  
+              <div class="col-12 mt-3">
+                <label for="address" class="form-label">Dirección</label>
+                <input type="text" class="form-control style-input-monitev" id="address" placeholder="1234 Main St" required>
+                <div class="invalid-feedback">
+                  Please enter your shipping address.
+                </div>
+              </div>
+  
+              <div class="col-md-5 mt-3">
+                <label for="country" class="form-label">País</label>
+                <select class="form-select-monitev" id="country" required>
+                  <option value="">Seleccionar...</option>
+                  <option>United States</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+              </div>
+  
+              <div class="col-md-4 mt-3">
+                <label for="state" class="form-label">Ciudad</label>
+                <select class="form-select-monitev" id="state" required>
+                  <option value="">Seleccionar...</option>
+                  <option>California</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+            </div>
+            <hr class="my-4">
+            <h4 class="mb-3">Tienes a disposición las siguientes opciones de pago</h4>
+            <hr class="my-4">
+               <app-boton-pago-epayco></app-boton-pago-epayco>
+            <hr class="mb-4">
+          </form>
+        </div>
+      </div>
+      <footer class="mt-4">
+        <div class="row">
+          <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+              <img src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/epayco/pagos_procesados_por_epayco_260px.png" style="margin-top:10px; float:left"> <img src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/epayco/credibancologo.png"
+                height="40px" style="margin-top:10px; float:right">
+            </div>
+          </div>
+        </div>
+      </footer>
+    <div class="separator separator-primary"></div>
+    </main>
+  </div>
+  <app-footer *ngIf="mostrarFooter"></app-footer>

@@ -1,0 +1,89 @@
+<div class="wrapper">
+    <div class="page-header page-header-small">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8"
+            style="background-image: url('assets/img/fondo-01.jpg');">
+        </div>
+        <div class="container">
+            <div class="content-center">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto text-center">
+                        <h2 class="title">Este es el resumen de tu transacción</h2>
+                        <h5 class="description" style="color:white;">A continuación se muestra el estado de compra, recuerda si tienes
+                            incovenientes o alguna duda, estamos para atenderte, nos puedes
+                            escribir a monitoreomonitev@monitev.com y con gusta resolveremos todas tus dudas.
+                            NOTA:
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-about-us" style="text-align: -webkit-center;">
+        <div class="container">
+            <!--RESPONSE EPAYCO COMPRAS-->
+            <header id="main-header" style="margin-top:20px">
+                <div class="row" style="justify-content: center;">
+                  <div class="col-lg-8 franja" style="text-align:left">
+                    <img class="center-block" src="assets/img/favicon_monitev.png">
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 ">
+                    <h4 style="text-align:center;margin-top: -64px;margin-bottom: 50px;"> Respuesta de la transacción </h4>
+                    <hr>
+                </div>
+                </div>
+              </header>
+              <div class="container">
+                <div class="row" style="margin-top:20px; justify-content: center;">
+                  <div class="col-lg-8 col-lg-offset-2">
+                    <div class="table-responsive">
+                      <table class="table table-bordered section section-tabs">
+                        <tbody *ngIf="transactionResponse">
+                          <tr>
+                            <td>Referencia</td>
+                            <td id="referencia">{{transactionResponse.x_id_invoice}}</td>
+                          </tr>
+                          <tr>
+                            <td class="bold">Fecha</td>
+                            <td id="fecha" class="">{{transactionResponse.x_transaction_date}}</td>
+                          </tr>
+                          <tr>
+                            <td>Estado</td>
+                            <td id="respuesta">{{transactionResponse.x_transaction_state | uppercase}}</td>
+                          </tr>
+                          <tr>
+                            <td>Motivo</td>
+                            <td id="motivo">{{transactionResponse.x_response_reason_text}}</td>
+                          </tr>
+                          <tr>
+                            <td class="bold">Banco</td>
+                            <td class="" id="banco">{{transactionResponse.x_bank_name}}</td>
+                          </tr>
+                          <tr>
+                            <td class="bold">Recibo</td>
+                            <td id="recibo">{{transactionResponse.x_transaction_id}}</td>
+                          </tr>
+                          <tr>
+                            <td class="bold">Total</td>
+                            <td class="" id="total">{{transactionResponse.x_amount}} {{transactionResponse.x_currency_code}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <footer class="mt-4">
+                <div class="row">
+                  <div class="container">
+                    <div class="col-lg-8 col-lg-offset-2">
+                      <img src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/epayco/pagos_procesados_por_epayco_260px.png" style="margin-top:10px; float:left"> <img src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/epayco/credibancologo.png"
+                        height="40px" style="margin-top:10px; float:right">
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            <div class="separator separator-primary"></div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>
